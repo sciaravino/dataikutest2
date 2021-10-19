@@ -14,7 +14,7 @@
     "users": []
   },
   "tutorialProject": true,
-  "tutorialId": "DKU_TUTORIAL_BASICS",
+  "tutorialId": "DKU_TUTORIAL_BASICS_101",
   "settings": {
     "flowAnchorSourcesAndSinks": true,
     "flowDisplaySettings": {
@@ -125,7 +125,8 @@
       }
     }
   },
-  "name": "Basics 101 (Tutorial)",
+  "name": "Basics 101 for Salvatore Ciaravino",
+  "projectStatus": "Sandbox",
   "imgPattern": 4,
   "showInitials": false,
   "metrics": {
@@ -183,11 +184,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 22,
+    "versionNumber": 23,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1634615796819
+    "lastModifiedOn": 1634615799033
   },
   "creationTag": {
     "versionNumber": 0,
