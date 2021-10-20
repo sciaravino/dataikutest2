@@ -26,6 +26,7 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
+  "origin": "PREPARE_RECIPE",
   "exploreUIParams": {
     "autoRefresh": true
   },
@@ -174,6 +175,7 @@
     "since_birthdate_days": 165,
     "ip_address_region_hierarchy": 218,
     "total_sum": 100,
+    "high_revenue": 105,
     "user_agent_version": 150,
     "user_agent": 300,
     "birthdate_parsed": 183,
