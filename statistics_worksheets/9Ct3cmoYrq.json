@@ -29,16 +29,252 @@
     "type": "worksheet_root",
     "confidenceLevel": 0.95,
     "showConfidenceInterval": false,
-    "cards": [],
+    "cards": [
+      {
+        "type": "univariate_header",
+        "showHistogram": true,
+        "showQuantile": true,
+        "showFrequencyTable": true,
+        "showSummary": true,
+        "showBoxPlot": true,
+        "xColumns": [
+          {
+            "name": "pages_visited",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "tshirt_category",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "total",
+            "type": "CONTINUOUS"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "pages_visited",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "pages_visited",
+                  "type": "CONTINUOUS"
+                },
+                "id": "UHID4uy"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "pages_visited",
+                  "type": "CONTINUOUS"
+                },
+                "id": "RXIpNHG"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "pages_visited",
+                  "type": "CONTINUOUS"
+                },
+                "id": "TDIG3io"
+              }
+            ],
+            "id": "Y5q7akw"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "tshirt_category",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "tshirt_category",
+                  "type": "CATEGORICAL"
+                },
+                "id": "IGJSBuN"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "tshirt_category",
+                  "type": "CATEGORICAL"
+                },
+                "id": "Y30eSg3"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "tshirt_category",
+                  "type": "CATEGORICAL"
+                },
+                "id": "iccAFGI"
+              }
+            ],
+            "id": "MEHGl6L"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "total",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "total",
+                  "type": "CONTINUOUS"
+                },
+                "id": "Q9RKiZS"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "total",
+                  "type": "CONTINUOUS"
+                },
+                "id": "i3cgOPK"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "total",
+                  "type": "CONTINUOUS"
+                },
+                "id": "lQSvL4L"
+              }
+            ],
+            "id": "OR7QRzM"
+          }
+        ],
+        "id": "7oE2Hd6"
+      },
+      {
+        "type": "fit_distribution",
+        "distributions": [
+          {
+            "distribution": {
+              "type": "exponential"
+            }
+          }
+        ],
+        "confidenceLevel": 0.95,
+        "column": {
+          "name": "total",
+          "type": "CONTINUOUS"
+        },
+        "id": "0UB6XXm"
+      }
+    ],
     "id": "JNjlh9R"
   },
   "name": "Worksheet",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1634741106666
+    "lastModifiedOn": 1634741195330
   },
   "creationTag": {
     "versionNumber": 0,
