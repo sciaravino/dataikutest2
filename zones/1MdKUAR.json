@@ -1,7 +1,12 @@
 {
   "name": "zoo",
   "color": "#4B8021",
-  "items": [],
+  "items": [
+    {
+      "objectId": "zoo2",
+      "objectType": "DATASET"
+    }
+  ],
   "shared": [],
   "tags": [],
   "customFields": {},
