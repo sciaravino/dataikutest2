@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1634737257062
+    "lastModifiedOn": 1634738089071
   },
   "creationTag": {
     "versionNumber": 0,
@@ -88,15 +88,15 @@
     "columns": [
       {
         "name": "order_date",
+        "type": "date"
+      },
+      {
+        "name": "order_id",
         "type": "string"
       },
       {
         "name": "pages_visited",
         "type": "bigint"
-      },
-      {
-        "name": "order_id",
-        "type": "string"
       },
       {
         "name": "customer_id",
@@ -108,12 +108,8 @@
         "type": "string"
       },
       {
-        "name": "tshirt_price",
+        "name": "total",
         "type": "double"
-      },
-      {
-        "name": "tshirt_quantity",
-        "type": "bigint"
       }
     ],
     "userModified": true
