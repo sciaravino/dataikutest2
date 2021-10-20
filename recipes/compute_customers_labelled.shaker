@@ -1,0 +1,202 @@
+{
+  "columnsSelection": {
+    "mode": "ALL"
+  },
+  "explorationSampling": {
+    "_refreshTrigger": 0,
+    "selection": {
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": 10000,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "maxStoredBytes": 104857600,
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "timeout": -1
+    },
+    "autoRefreshSample": false
+  },
+  "explorationFilters": [],
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateParser",
+      "params": {
+        "outCol": "",
+        "formats": [
+          "yyyy/HH/mm"
+        ],
+        "columns": [
+          "birthdate"
+        ],
+        "timezone_id": "UTC",
+        "appliesTo": "SINGLE_COLUMN",
+        "lang": "auto"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateDifference",
+      "params": {
+        "output": "age_first_order",
+        "input2": "first_order_date",
+        "outputUnit": "YEARS",
+        "input1": "birthdate",
+        "compareTo": "COLUMN",
+        "reverse": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "MinMaxProcessor",
+      "params": {
+        "upperBound": "100",
+        "columns": [
+          "age_first_order"
+        ],
+        "clear": true,
+        "lowerBound": "14.00"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "first_order_date",
+          "birthdate"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "UserAgentClassifier",
+      "params": {
+        "column": "user_agent"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "user_agent",
+          "user_agent_type",
+          "user_agent_category",
+          "user_agent_version",
+          "user_agent_osversion",
+          "user_agent_osflavor"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "GeoIPResolver",
+      "params": {
+        "inCol": "ip_address",
+        "extract_country": true,
+        "extract_countrycode3": false,
+        "extract_city": false,
+        "extract_latlng": false,
+        "extract_countrycode": false,
+        "extract_postalcode": false,
+        "extract_timezone": false,
+        "outColPrefix": "ip_address_",
+        "extract_continentcode": false,
+        "extract_region": false,
+        "extract_geopoint": true
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "if(total_sum \u003e 300, \"True\", \"False\")",
+        "column": "high_revenue"
+      },
+      "alwaysShowComment": false
+    }
+  ],
+  "maxProcessedMemTableBytes": -1,
+  "previewMode": "ALL_ROWS",
+  "vizSampling": {
+    "_refreshTrigger": 0,
+    "autoRefreshSample": false
+  },
+  "analysisColumnData": {},
+  "columnWidthsByName": {
+    "ip_address_geopoint": 183,
+    "birthdate": 113,
+    "ip_address_region": 190,
+    "gender": 100,
+    "first_order_date": 183,
+    "user_agent_os": 113,
+    "ip_address_country": 169,
+    "since_birthdate_days": 165,
+    "ip_address_region_hierarchy": 218,
+    "total_sum": 100,
+    "user_agent_version": 150,
+    "user_agent": 300,
+    "birthdate_parsed": 183,
+    "age_first_order": 128,
+    "user_agent_osflavor": 158,
+    "user_agent_osversion": 165,
+    "ip_address_region_code": 180,
+    "pages_visited_avg": 143,
+    "user_agent_brand": 135,
+    "count": 100,
+    "ip_address": 120,
+    "user_agent_type": 128,
+    "ip_address_city": 183,
+    "user_agent_category": 158,
+    "customerID": 100,
+    "campaign": 100,
+    "ip_address_country_code": 188
+  },
+  "sorting": [],
+  "globalSearchQuery": "",
+  "coloring": {
+    "scheme": "MEANING_AND_STATUS",
+    "individualColumns": [],
+    "valueColoringMode": "HASH"
+  }
+}
