@@ -1,12 +1,155 @@
 {
   "inputDatasetSmartName": "customers_orders_joined",
   "script": {
-    "steps": [],
+    "steps": [
+      {
+        "type": "DateParser",
+        "params": {
+          "outCol": "",
+          "lang": "auto",
+          "timezone_id": "UTC",
+          "formats": [
+            "yyyy/HH/mm"
+          ],
+          "appliesTo": "SINGLE_COLUMN",
+          "columns": [
+            "birthdate"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "DateDifference",
+        "params": {
+          "input1": "birthdate",
+          "input2": "first_order_date",
+          "output": "age_first_order",
+          "outputUnit": "YEARS",
+          "compareTo": "COLUMN",
+          "reverse": false
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "MinMaxProcessor",
+        "params": {
+          "columns": [
+            "age_first_order"
+          ],
+          "lowerBound": "14.00",
+          "upperBound": "100",
+          "clear": true
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "ColumnsSelector",
+        "params": {
+          "keep": false,
+          "appliesTo": "COLUMNS",
+          "columns": [
+            "first_order_date",
+            "birthdate"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "UserAgentClassifier",
+        "params": {
+          "column": "user_agent"
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "ColumnsSelector",
+        "params": {
+          "keep": false,
+          "appliesTo": "COLUMNS",
+          "columns": [
+            "user_agent",
+            "user_agent_type",
+            "user_agent_category",
+            "user_agent_version",
+            "user_agent_osversion",
+            "user_agent_osflavor"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "GeoIPResolver",
+        "params": {
+          "inCol": "ip_address",
+          "outColPrefix": "ip_address_",
+          "extract_country": true,
+          "extract_countrycode": false,
+          "extract_region": false,
+          "extract_city": false,
+          "extract_postalcode": false,
+          "extract_latlng": false,
+          "extract_timezone": false,
+          "extract_continentcode": false,
+          "extract_geopoint": true,
+          "extract_countrycode3": false
+        },
+        "metaType": "PROCESSOR",
+        "preview": true,
+        "disabled": false,
+        "alwaysShowComment": false
+      }
+    ],
     "maxProcessedMemTableBytes": -1,
     "columnsSelection": {
       "mode": "ALL"
     },
-    "columnWidthsByName": {},
+    "columnWidthsByName": {
+      "customerID": 100,
+      "gender": 100,
+      "birthdate": 113,
+      "user_agent": 300,
+      "ip_address": 120,
+      "campaign": 100,
+      "first_order_date": 183,
+      "pages_visited_avg": 143,
+      "total_sum": 100,
+      "count": 100,
+      "birthdate_parsed": 183,
+      "since_birthdate_days": 165,
+      "age_first_order": 128,
+      "user_agent_type": 128,
+      "user_agent_category": 158,
+      "user_agent_brand": 135,
+      "user_agent_version": 150,
+      "user_agent_os": 113,
+      "user_agent_osversion": 165,
+      "user_agent_osflavor": 158,
+      "ip_address_geopoint": 183,
+      "ip_address_city": 183,
+      "ip_address_region_hierarchy": 218,
+      "ip_address_region": 190,
+      "ip_address_region_code": 180,
+      "ip_address_country_code": 188,
+      "ip_address_country": 169
+    },
     "coloring": {
       "scheme": "MEANING_AND_STATUS",
       "individualColumns": [],
@@ -41,7 +184,9 @@
       "autoRefreshSample": false,
       "_refreshTrigger": 0
     },
-    "exploreUIParams": {},
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
     "globalSearchQuery": "",
     "explorationFilters": [],
     "previewMode": "ALL_ROWS"
@@ -49,11 +194,11 @@
   "charts": [],
   "name": "Analyze customers_orders_joined",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 20,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1634744257810
+    "lastModifiedOn": 1634744622453
   },
   "creationTag": {
     "versionNumber": 0,
