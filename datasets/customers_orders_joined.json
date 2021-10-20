@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1634743073278
+    "lastModifiedOn": 1634743615240
   },
   "creationTag": {
     "versionNumber": 0,
@@ -109,11 +109,6 @@
       {
         "name": "campaign",
         "type": "string"
-      },
-      {
-        "name": "customer_id",
-        "type": "string",
-        "meaning": "Text"
       },
       {
         "name": "first_order_date",
