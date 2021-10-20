@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1634742160147
+    "lastModifiedOn": 1634742179924
   },
   "creationTag": {
     "versionNumber": 0,
@@ -75,11 +75,11 @@
         "type": "double"
       },
       {
-        "name": "REASON",
+        "name": "JOB",
         "type": "string"
       },
       {
-        "name": "JOB",
+        "name": "REASON",
         "type": "string"
       },
       {
