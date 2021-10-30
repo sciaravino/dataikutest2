@@ -1,0 +1,102 @@
+{
+  "preFilter": {
+    "distinct": false,
+    "enabled": false
+  },
+  "keys": [
+    {
+      "column": "animal_name"
+    },
+    {
+      "column": "hair"
+    },
+    {
+      "column": "feathers"
+    },
+    {
+      "column": "eggs"
+    },
+    {
+      "column": "milk"
+    },
+    {
+      "column": "airborne"
+    },
+    {
+      "column": "aquatic"
+    },
+    {
+      "column": "predator"
+    },
+    {
+      "column": "toothed"
+    },
+    {
+      "column": "backbone"
+    },
+    {
+      "column": "breathes"
+    },
+    {
+      "column": "venomous"
+    },
+    {
+      "column": "fins"
+    },
+    {
+      "column": "legs"
+    },
+    {
+      "column": "tail"
+    },
+    {
+      "column": "domestic"
+    },
+    {
+      "column": "catsize"
+    },
+    {
+      "column": "class_type"
+    }
+  ],
+  "globalCount": false,
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVESERVER2"
+    },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "skipPrerunValidate": false,
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "mode": "AUTO",
+        "autoModeRepartitionInto": 10,
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "executionEngine": "SPARK_SUBMIT",
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "outputColumnNameOverrides": {},
+  "postFilter": {
+    "distinct": false,
+    "enabled": false
+  }
+}
