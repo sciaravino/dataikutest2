@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1635609506373
+    "lastModifiedOn": 1635609531576
   },
   "creationTag": {
     "versionNumber": 0,
@@ -89,74 +89,6 @@
       {
         "name": "animal_name",
         "type": "string"
-      },
-      {
-        "name": "hair",
-        "type": "bigint"
-      },
-      {
-        "name": "feathers",
-        "type": "bigint"
-      },
-      {
-        "name": "eggs",
-        "type": "bigint"
-      },
-      {
-        "name": "milk",
-        "type": "bigint"
-      },
-      {
-        "name": "airborne",
-        "type": "bigint"
-      },
-      {
-        "name": "aquatic",
-        "type": "bigint"
-      },
-      {
-        "name": "predator",
-        "type": "bigint"
-      },
-      {
-        "name": "toothed",
-        "type": "bigint"
-      },
-      {
-        "name": "backbone",
-        "type": "bigint"
-      },
-      {
-        "name": "breathes",
-        "type": "bigint"
-      },
-      {
-        "name": "venomous",
-        "type": "bigint"
-      },
-      {
-        "name": "fins",
-        "type": "bigint"
-      },
-      {
-        "name": "legs",
-        "type": "bigint"
-      },
-      {
-        "name": "tail",
-        "type": "bigint"
-      },
-      {
-        "name": "domestic",
-        "type": "bigint"
-      },
-      {
-        "name": "catsize",
-        "type": "bigint"
-      },
-      {
-        "name": "class_type",
-        "type": "bigint"
       }
     ],
     "userModified": true
