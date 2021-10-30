@@ -6,57 +6,6 @@
   "keys": [
     {
       "column": "animal_name"
-    },
-    {
-      "column": "hair"
-    },
-    {
-      "column": "feathers"
-    },
-    {
-      "column": "eggs"
-    },
-    {
-      "column": "milk"
-    },
-    {
-      "column": "airborne"
-    },
-    {
-      "column": "aquatic"
-    },
-    {
-      "column": "predator"
-    },
-    {
-      "column": "toothed"
-    },
-    {
-      "column": "backbone"
-    },
-    {
-      "column": "breathes"
-    },
-    {
-      "column": "venomous"
-    },
-    {
-      "column": "fins"
-    },
-    {
-      "column": "legs"
-    },
-    {
-      "column": "tail"
-    },
-    {
-      "column": "domestic"
-    },
-    {
-      "column": "catsize"
-    },
-    {
-      "column": "class_type"
     }
   ],
   "globalCount": false,
@@ -96,6 +45,17 @@
   },
   "outputColumnNameOverrides": {},
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "animal_name",
+            "type": "string"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   }
